@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reserve
+{% endblock %}
+
+{% block main %}
+<h1 style="margin-bottom:50px;">Check for free rooms</h1>
+    <div style = "width: 250px; margin-left:auto; margin-right:auto" class="input-group mb-3">
+        <form action="/check" method = "post">
+            <div style="margin-left:auto; margin-right:auto" class="input-group-prepend">
+                <select name="operator" style="height:100%;"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option>Select type of room</option>
+                    <option value="twobed">Room for 2 people</option>
+                    <option value="threebed">Room for 3 people</option>
+                    <option value="apartment">Apartment</option>
+                </select>
+            </div>
+            <input name="fromdate" type="date" class="form-control" aria-label="Text input with dropdown button">
+            <input name="todate" style="margin-top:10px;"type="date" class="form-control" aria-label="Text input with dropdown button">
+            <button style="height: 50px; width: 100px; margin-top: 20px;" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {% if answer %}
+    <div style ="margin-top:50px; width: 500px; margin-left:auto; margin-right:auto;"class="alert alert-success" role="alert">
+        Available rooms: {{answer}}.
+    </div>
+{% endif %}
+
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reserve
+{% endblock %}
+
+{% block main %}
+<div style = "width:700px; height:50px; margin-left:auto; margin-right:auto" class="input-group mb-3">
+    <div class="input-group-prepend">
+
+      <select style="height:100%;"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="twobed">Room for 2 people</option>
+        <option value="threebed">Room for 3 people</option>
+        <option value="apartment">Apartment</option>
+      </select>
+    </div>
+    <input type="date" class="form-control" aria-label="Text input with dropdown button">
+    <input type="date" class="form-control" aria-label="Text input with dropdown button">
+  </div>
+  <button style="height: 50px; width: 100px; margin-top: 20px;" type="submit" class="btn btn-primary">Submit</button>
+  {% if answer %}
+        <p>Available rooms: {{answer}}</p>
+  {% endif %}
+{%endblock%}

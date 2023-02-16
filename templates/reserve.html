@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reserve
+{% endblock %}
+
+{% block main %}
+    <form action="/reserve" method="post">
+        <h1>How many rooms you want to make reservation for?</h1>
+        <p>Maximum amount is 6</p>
+        <input style="width:100px; margin-left:auto; margin-right:auto;"name="number" type="number" class="form-control">
+        <button style="height: 50px; width: 100px; margin-top: 20px;" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reserve
+{% endblock %}
+
+{% block main %}
+    <form action ="/reserve1" method="post">
+        <p>Name of reservation: <input style="width:200px;" type="text" name="resname"></p>
+        <input type="hidden" name="value" value = {{number}}>
+        {% for i in range(number) %}
+        <table class="table">
+            <thead class="thead-light">
+                <th>Type of room:</th>
+                <th>From:</th>
+                <th>To:</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="operator{{i}}" style ="height:50px"class="form-select form-select-lg mb-3">
+                            <option value="">Select type of room</option>
+                            <option value="twobed">Room for 2 people</option>
+                            <option value="threebed">Room for 3 people</option>
+                            <option value="apartment">Apartment</option>
+                        </select>
+                    </td>
+                    <td><input type="date" style ="height:50px;" name="dateto{{i}}" class="form-control"></td>
+                    <td><input type="date" style ="height:50px;" name="datefrom{{i}}" class="form-control"></td>
+                </tr>
+            </tbody>
+        </table>
+        {% endfor %}
+        <button style="height: 50px; width: 100px; margin-top: 20px;" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock %}

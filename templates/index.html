@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col" colspan="4"><p>Hotel name: <span sty;e = "font-weight: bold;">{{hotelname}}</span></p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Total reservations next month: {{aheadres}}</td>
+        <td>Total reservations last month: {{behindres}}</td>
+        <td>Total reservations: {{total}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    register
+{% endblock %}
+
+{% block main %}
+<div>
+    <form action="/register" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td><p>Hotel name: </p></td>
+                    <td><input type="text" name="hotelname"></td>
+                </tr>
+                <tr>
+                    <td><p>Number of rooms for 2 people: </p></td>
+                    <td><input type="number" name = "twopeople"></td>
+                </tr>
+                <tr>
+                    <td><p>Number of rooms for 3 people: </p></td>
+                    <td><input type="number" name = "threepeople"><td></td>
+                </tr>
+                <tr>
+                    <td><p>Number of apartments: </p></td>
+                    <td><input type="number" name = "morepeople"><td>
+                </tr>
+                <tr>
+                    <td><p>Username: </p></td>
+                    <td><input type="text" name = "username"><td>
+                </tr>
+                <tr>
+                    <td>Enter password</td>
+                    <td><input type="password" name = "password"></td>
+                </tr>
+                <tr>
+                    <td>Confirm password</td>
+                    <td><input type="password" name = "confirmpass"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type = "submit" class="btn btn-primary" style = "margin-top: 10px;">submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+{% endblock %}

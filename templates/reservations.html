@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reservations
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <th>order_id</th>
+            <th>Reservation name</th>
+            <th>Type of room</th>
+            <th>from date</th>
+            <th>to date</th>
+        </thead>
+        <tbody>
+            {% for i in history%}
+                <tr>
+                    <td>{{i['order_id']}}</td>
+                    <td>{{i["resname"]}}</td>
+                    <td>{{i["roomtype"]}}</td>
+                    <td>{{i["fromdate"]}}</td>
+                    <td>{{i["todate"]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
