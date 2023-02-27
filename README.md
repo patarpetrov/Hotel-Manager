@@ -1,5 +1,9 @@
 # Hotel Manager
 
+
+## How to run
+Create new enviorment install the requirements and then python app.py flask run.
+
 ## Explaining the project
 My final project is helpful hand for hotel owners, managers, and even staff to handle the hotel operations on-the-move from their laptops or smartphones. They can easily access data for the hotel like how many reservations there are for given period. The users have also the ability to reserve rooms, check for free rooms in given period of time, see statistics for the hotel.
 ### Databases
